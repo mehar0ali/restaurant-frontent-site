@@ -1,0 +1,579 @@
+/*main .welcome:after{
+    content: '';
+    animation: changetext 10s infinite linear;
+    color: #fa7373;
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@keyframes changetext{
+    0%{content: "Burger";}
+    20%{content: "Pizza";}
+    40%{content: "Shawarma";}
+    60%{content: "Sandwich";}
+    80%{content: "Platter";}
+    100%{content: "Grill Items";}
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    background: #2b2a2a;
+}
+
+nav{
+    color: #fff;
+    width: 100vw;
+    height: 80px;
+    /* border-bottom: 1px solid tomato; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+label{
+    position: relative;
+    left: 55px;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+span{
+    color: tomato;
+}
+
+nav ul{
+    display: flex;
+    position: relative;
+}
+
+nav ul li{
+    cursor: pointer;
+    padding-right: 30px;
+    list-style: none;
+    font-size: 15px;
+    transition: .3s;
+}
+
+nav ul li:hover{
+    color: tomato;
+}
+
+nav ul li ul{
+    position: absolute;
+    display: block;
+    left: 75px;
+    visibility: hidden;
+    transition: .3s;
+    width: 20%;
+
+}
+nav ul li ul li{
+    color: #fff; 
+}
+
+nav ul li ul li ul{
+    position: absolute;
+    left: 90px;
+    top: 25px;
+}
+
+nav ul li:hover > ul{
+    visibility: visible;
+}
+
+nav .logIn{
+    position: relative;
+    right: 65px;
+}
+
+.signUp{
+    color: #fff;
+    background-color: tomato;
+    width: 60px;
+    height: 30px;
+    border-radius: 25px;
+    padding: 2px 25px 0 25px;
+    /* margin-right: 20px; */
+}
+
+.signUp:hover{
+    color: white;
+    background-color: rgb(179, 51, 1);
+}
+
+.mainDiv{
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    top: 60px;
+}
+
+.midContent{
+    position: relative;
+    /* top: 5px; */
+}
+
+.midContent p{
+    font-family: 'Signika Negative', sans-serif;
+    margin-top: -20px;
+
+}
+
+.midContent h1{
+    font-size: 40px;
+    margin-top: -20px;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.order{
+    background-color: tomato;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.order:hover{
+    background: rgb(179, 51, 1);
+}
+
+.menu1{
+    background: transparent;
+    border: none;
+    color: tomato;
+    font-size: 15px;
+}
+
+.menu1::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    bottom: 0;
+    height: 3px;
+    left: 50%;
+    background: tomato;
+
+}
+
+.menu1:hover:after{
+    width: 65px;
+    transition: 0.5s ease-out;
+}
+
+.burger{
+    width: 400px;
+    position: relative;
+    right: 40px;
+    height: auto;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.dotted{
+    position: absolute;
+    width: 350px;
+    height: 340px;
+    top: 5px;
+    left: 670px;
+    border-style: dashed;
+    border-radius: 25px;
+    border:  inherit #fff;
+    z-index: 0;
+}
+
+.items{
+    width: 100vw;
+    position: relative;
+    top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.boxes{
+    display: grid;
+    justify-content: center;
+    width: 250px;
+    height: 120px;
+    background-color: #000;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.display1{
+    position: absolute;
+    left: 55px;
+    top: -45px;
+    width: 90px;
+    height: auto;
+}
+
+.display2{
+    position: absolute;
+    top: -35px;
+    right: 710px;
+    width: 80px;
+    height: auto;
+}
+
+.display3{
+    position: absolute;
+    right: 285px;
+    top: -25px;
+    width: 80px;
+    height: auto;
+}
+
+.boxes h3{
+    margin: 15px 0 0 0;
+    background: #000;
+    width: 100%;
+    height: 5px;
+}
+
+.boxes span{
+    position: relative;
+    top: 5px;
+    float: left;
+    font-size: 13px;    
+}
+
+.btn{
+    width: 100px;
+    height: 25px;
+    background-color: tomato;
+    border: none;
+    border-radius: 20px;
+    transition: .3s;
+    font-weight: bold;
+}
+
+.btn:hover{
+    background-color: rgb(179, 51, 1);
+}
+
+.fa-cart-shopping{
+    position: absolute;
+    margin: 70px 0 0 190px;
+    background-color: #2ecc71;
+    color: #000;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    border-radius: 50px 50px 0 50px;
+    padding: 10px 0 0 10px;
+    transition: .3s;
+}
+
+.fa-cart-shopping:hover{
+    background-color: #27ae60;
+}
+
+
+
+
+
+
+/* PAGE TWO________________________________________________________________ */
+
+
+.mainTwo{
+    width: 100%;
+    height: 100vh;
+    background: #2b2a2a;
+    color: #fff;
+}
+
+.subMainTwo{
+    display: grid;
+    justify-items: center;
+    padding-top: 90px;
+    font-size: 20px;
+}
+
+.subMainTwo h1{
+    margin: 0;
+}
+
+.middleItems{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.middleItems .productsServe{
+    width: 300px;
+    height: 370px;
+    margin: 50px;
+    /* border: 1px solid wheat; */
+}
+
+.middleItems .productsServe img{
+    width: 250px;
+    height: 250px;
+    transition: .3s;
+    cursor: pointer;
+}
+.middleItems .productsServe img:hover{
+    width: 255px;
+    height: 255px;
+}
+
+.middleItems .productsServe h4{
+    background-color: tomato;
+    display: grid;
+    justify-items: center;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.middleItems .productsServe h4:hover{
+    background-color: rgb(179, 51, 1);
+}
+
+
+
+
+
+
+
+
+
+/* THIRD PAGE-------------------------------------------------- */
+
+.menue{
+    width: 100vw;
+    height: 110vh;
+    background-color: #2b2a2a;
+    color: white;
+}
+
+.gridss{
+    width: 95%;
+    padding: 40px;
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 280px 280px 280px 280px;
+    grid-gap: 20px;
+   
+}
+
+.gapi{
+    border: 3px solid tomato;
+    border-radius: 10px;
+    display: grid;
+    justify-items: center;
+    cursor: pointer;
+}
+
+.gridss img{
+    width: 180px;
+    height: 120px;
+}
+
+.menue .gridss .gapi .rating .cart{
+    position: absolute;
+    margin: -15px 0 0px 35px;
+}
+
+
+
+
+
+
+
+
+/* Bottom Page */
+
+
+.bottomMenu{
+    display: flex;
+    justify-content: space-evenly;   
+    width: 100%;
+    height: 40vh;
+    padding-top: 30px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.bottomMenu ul li{
+    list-style: none;
+    margin-left: -30px;
+}
+
+.bottomMenu ul li:hover{
+    color: tomato;
+    list-style: underline;
+}
+
+.bottomMenu i{
+    font-size: 25px;
+    padding-left: 20px;
+    transition: .3s;
+}
+
+.bottomMenu i:hover{
+    color: tomato;
+}
+
+
+
+
+
+
+
+
+/* Copyright */
+
+
+.copyRight{
+    width: 100;
+    height: 35px;
+    background-color: #2b2a2a;
+    color: white;
+    padding: 5px 0 0 570px;
+}
+
+.copyRight i{
+    padding-right: 10px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (max-width:360px) {
+    .mainTwo{
+        height: 260vh;
+    }
+
+    .subMainTwo{
+        padding-top: 225px;
+        padding-right: 10px;
+    }
+
+    .subMainTwo h1{
+        font-size: 25px;
+    }
+    .middleItems{
+        display: block;
+    }
+
+
+
+
+
+
+
+
+
+    .menue{
+        height: 430vh;
+    }
+    .gridss{
+        display: block;
+        height: 1000px;
+        width: 100vw;
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+
+    .gridss .gapi{
+        width: 385px;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.bottmMenu{
+    width: 100%;
+    height: 60vh;
+    background-color: #000;
+    display: grid;
+    justify-items: center;
+
+}
+.bottomMenu{
+    display: block;
+    padding-top: 10px;
+}
+
+.bottomMenu .bottm{
+    display: flex;
+    justify-content: space-around;
+    padding-right: 20px;
+}
+
+.socialLinks{
+    padding-left: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+.copyRight{
+    height: 35px;
+
+}
+
+.copyRight i, span{
+    position: absolute;
+    left: -25px;
+    top: -10px;
+} */
